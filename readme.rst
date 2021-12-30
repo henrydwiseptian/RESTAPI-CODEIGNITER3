@@ -1,70 +1,56 @@
-###################
-What is CodeIgniter
-###################
+# REST-API-CODEIGNITER-CRUD
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+This is a REST API project with Codeigniter 3 and Sql Server 2008 R2
 
-*******************
-Release Information
-*******************
+1. CREATE DATABASE IN SQL SERVER
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+============================= CREATE TABLE =============================
 
-**************************
-Changelog and New Features
-**************************
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+```
+CREATE TABLE mahasiswa (
+    Id int NOT NULL IDENTITY(1,1) PRIMARY KEY ,
+    [nrp] varchar(50),
+    nama varchar(50),
+    email varchar(50),
+    jurusan varchar(50)
+); 
+```
 
-*******************
-Server Requirements
-*******************
+============================= INSERT DATA =============================
 
-PHP version 5.6 or newer is recommended.
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+```
+insert into mahasiswa ([nrp], nama,email, jurusan) 
+values 
+('2016102773','Henry Dwi Septian','henrydwiseptian@gmail.com','informatika'),
+('2016102774','Goldy Widiyanto','goldywy@gmail.com','DKV'),
+('2016102775','Reza Khalafi','mrezakhalafi@gmail.com','sistem informasi'),
+('2016102776','Matrix Indra','matrixindra@gmail.com','ilmu komunikasi')
+```
 
-************
-Installation
-************
+2. MAKE API CRUD
+    - index_get By ID (READ)
+    ![image](https://user-images.githubusercontent.com/53201265/147721475-bb1f5c29-88b3-4d2f-8041-713c1ed92233.png)
+    - index_get All (READ)
+    ![image](https://user-images.githubusercontent.com/53201265/147722708-4ad5f66e-aa7d-4c3d-ab62-87028cf1208d.png)
+    - index_delete (DELETE)
+    ![image](https://user-images.githubusercontent.com/53201265/147723996-768939bd-aff9-46d1-977c-c7c42cb63571.png)
+    - index_post (CREATE)
+    ![image](https://user-images.githubusercontent.com/53201265/147724443-30a0f603-3536-49f5-80e5-bef42b10c43f.png)
+    index_put (UPDATE)
+    ![image](https://user-images.githubusercontent.com/53201265/147724935-10330f4d-05ce-4864-a4b7-d2cfb57d1440.png)
 
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
+3. Description HTTP REQUEST in this project
+```
+HTTP_OK             => 200
+HTTP_BAD_REQUEST    => 400
+HTTP_NO_CONTENT     => 204
+HTTP_CREATED        => 201
+```
 
-*******
-License
-*******
+ENJOY CODING !!!
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
 
-*********
-Resources
-*********
 
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
 
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
