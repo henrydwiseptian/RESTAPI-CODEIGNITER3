@@ -38,9 +38,10 @@ values
     - index_delete (DELETE)
     ![image](https://user-images.githubusercontent.com/53201265/147723996-768939bd-aff9-46d1-977c-c7c42cb63571.png)
     - index_post (CREATE)
-    ![image](https://user-images.githubusercontent.com/53201265/216223483-0494491c-9512-424d-9185-7d804dc51e9e.png)
+    ![image](https://user-images.githubusercontent.com/53201265/216224089-38f2d4bf-1e7e-4032-b97d-21e55bd1e027.png)
     - index_put (UPDATE)
-    ![image](https://user-images.githubusercontent.com/53201265/216223532-f1012892-4635-4b93-9a3d-2bdde46c7890.png)
+    ![image](https://user-images.githubusercontent.com/53201265/216224154-9aafe1f4-1618-4c19-ae19-453c877cadab.png)
+
 
 3. Description HTTP REQUEST in this project
 ```
