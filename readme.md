@@ -30,6 +30,7 @@ values
 ```
 
 2. MAKE API CRUD
+
     - index_get By ID (READ)
     ![image](https://user-images.githubusercontent.com/53201265/147721475-bb1f5c29-88b3-4d2f-8041-713c1ed92233.png)
     - index_get All (READ)
@@ -37,9 +38,9 @@ values
     - index_delete (DELETE)
     ![image](https://user-images.githubusercontent.com/53201265/147723996-768939bd-aff9-46d1-977c-c7c42cb63571.png)
     - index_post (CREATE)
-    ![image](https://user-images.githubusercontent.com/53201265/147724443-30a0f603-3536-49f5-80e5-bef42b10c43f.png)
-    index_put (UPDATE)
-    ![image](https://user-images.githubusercontent.com/53201265/147724935-10330f4d-05ce-4864-a4b7-d2cfb57d1440.png)
+    ![image](https://user-images.githubusercontent.com/53201265/216223483-0494491c-9512-424d-9185-7d804dc51e9e.png)
+    - index_put (UPDATE)
+    ![image](https://user-images.githubusercontent.com/53201265/216223532-f1012892-4635-4b93-9a3d-2bdde46c7890.png)
 
 3. Description HTTP REQUEST in this project
 ```
