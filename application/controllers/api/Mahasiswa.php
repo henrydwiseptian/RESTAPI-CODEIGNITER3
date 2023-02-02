@@ -119,11 +119,13 @@ class Mahasiswa extends REST_Controller
             ], REST_Controller::HTTP_BAD_REQUEST); 
 
         }else{
-            $this->Modelmodel->queryhandle("INSERT into mahasiswa (nrp, nama, email, jurusan) VALUES 
+            $cek = $this->Modelmodel->queryhandle("INSERT into mahasiswa (nrp, nama, email, jurusan) VALUES 
             ('".$data['nrp']."','".$data['nama']."','".$data['email']."','".$data['jurusan']."')");
+            $detailmahasiswa = $this->Modelmodel->showsingle("SELECT * from mahasiswa where nrp='".$data['nrp']."'");
             $this->response([
                 'status'    => true,
-                'message'   => 'data mahasiswa berhasil dibuat'
+                'message'   => 'data mahasiswa berhasil dibuat',
+                'data'      => $detailmahasiswa
             ], REST_Controller::HTTP_CREATED);
         }
     }
@@ -181,16 +183,19 @@ class Mahasiswa extends REST_Controller
 
         }else{
             $mahasiswa = $this->Modelmodel->queryupdate("UPDATE mahasiswa SET nrp='".$data['nrp']."', nama='".$data['nama']."', email='".$data['email']."', jurusan='".$data['jurusan']."' WHERE id='".$data['id']."'");
+            $detailmahasiswa = $this->Modelmodel->showsingle("SELECT * from mahasiswa where nrp='".$data['nrp']."'");
             
             if($mahasiswa){
                 $this->response([
                     'status'    => true,
-                    'message'   => 'data mahasiswa berhasil diubah'
+                    'message'   => 'data mahasiswa berhasil diubah',
+                    'data'      => $detailmahasiswa
                 ], REST_Controller::HTTP_OK);
             }else{
                 $this->response([
                     'status'    => false,
-                    'message'   => 'data mahasiswa gagaldiubah'
+                    'message'   => 'data mahasiswa gagaldiubah',
+                    'data'      => $detailmahasiswa
                 ], REST_Controller::HTTP_BAD_REQUEST);
             }
         }
